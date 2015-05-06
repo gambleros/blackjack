@@ -21,7 +21,8 @@ namespace BlackJack
         {
             Graphics g = e.Graphics;
             g.DrawImageUnscaled(imageList1.Images[52], 10, 10);
-    
+            //MessageBox.Show(imageList1.Images.ContainsKey("c1.png").ToString());
+            
         }
     }
 }
