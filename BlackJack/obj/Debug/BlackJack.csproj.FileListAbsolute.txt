@@ -1,0 +1,9 @@
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.BlackJackForm.resources
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.Cache
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\Aleksandar\Desktop\C#\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
