@@ -8,8 +8,8 @@ namespace BlackJack
 {
     public class Deck
     {
-        Card[] deck = new Card[52];
-        int[] values = new int[] { 11,2,3,4,5,6,7,8,9,10,10,10,10};
+        public Card[] deck = new Card[52];
+        public int[] values = new int[] { 11,2,3,4,5,6,7,8,9,10,10,10,10};
         public Deck()
         {
             int i = 0;

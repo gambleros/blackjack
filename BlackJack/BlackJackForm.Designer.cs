@@ -88,6 +88,7 @@
             this.btnDeal.TabIndex = 4;
             this.btnDeal.Text = "Deal";
             this.btnDeal.UseVisualStyleBackColor = false;
+            this.btnDeal.Click += new System.EventHandler(this.btnDeal_Click);
             // 
             // btnHit
             // 
