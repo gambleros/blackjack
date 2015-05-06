@@ -99,6 +99,7 @@
             this.btnHit.TabIndex = 5;
             this.btnHit.Text = "Hit";
             this.btnHit.UseVisualStyleBackColor = false;
+            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
             // 
             // btnStand
             // 
@@ -112,7 +113,7 @@
             // 
             // tbAlert
             // 
-            this.tbAlert.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tbAlert.BackColor = System.Drawing.Color.Honeydew;
             this.tbAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.tbAlert.Location = new System.Drawing.Point(204, 190);
             this.tbAlert.Name = "tbAlert";
