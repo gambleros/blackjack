@@ -110,6 +110,7 @@
             this.btnStand.TabIndex = 6;
             this.btnStand.Text = "Stand";
             this.btnStand.UseVisualStyleBackColor = false;
+            this.btnStand.Click += new System.EventHandler(this.btnStand_Click);
             // 
             // tbAlert
             // 

@@ -69,7 +69,32 @@ namespace BlackJack
                 HitCards();
                 Hit = false;
             }
+            else if (Stand)
+            {
+                int pom = r.Next(52);
+                Card c = deck.deck[pom];
+                Dealer.Add(c);
+                addWidth = 160;
+                for (int i = 0; i < Dealer.Count; i++)
+                {
+                    g.DrawImageUnscaled(imageList1.Images[Dealer[i].Img], addWidth, 10);
+                    addWidth += 150;
+                }
+                addWidth = 10;
+                for (int i = 0; i < Player.Count; i++)
+                {
+                    g.DrawImageUnscaled(imageList1.Images[Player[i].Img], addWidth, 300);
+                    addWidth += 150;
+                }
+                StandCards();
+                Stand = false;
+            }
 
+        }
+        private void StandCards()
+        {
+            msgSet();
+            tbDealer.Text = sumDealer().ToString();
         }
         private void HitCards()
         {
@@ -117,8 +142,7 @@ namespace BlackJack
         }
         private void DealCards()
         {
-            tbAlert.Text = "Hit or Stand";
-            tbAlert.BackColor = Color.Honeydew;
+            msgSet();
             int sumP = sumPlayer();
             tbPlayer.Text = sumP.ToString();
             int sumD = sumDealer();
@@ -136,6 +160,12 @@ namespace BlackJack
         private void btnHit_Click(object sender, EventArgs e)
         {
             Hit = true;
+            Invalidate();
+        }
+
+        private void btnStand_Click(object sender, EventArgs e)
+        {
+            Stand = true;
             Invalidate();
         }
     }
