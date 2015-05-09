@@ -18,14 +18,12 @@ namespace BlackJack
         public bool Stand { get; set; }
         public int addWidth { get; set; }
         public int DrawCard { get; set; }
-        Random r;
         public List<Card> Dealer;
         public List<Card> Player;
         public BlackJackForm()
         {
             InitializeComponent();
             deck = new Deck();
-            r = new Random();
             Dealer=new List<Card>();
             Player=new List<Card>();
             addWidth = 10;
