@@ -161,6 +161,7 @@ AppPackages/
 !*.[Cc]ache/
 
 # Others
+
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*
@@ -202,4 +203,6 @@ FakesAssemblies/
 *.plg
 
 # Visual Studio 6 workspace options file
+
 *.opt
+
