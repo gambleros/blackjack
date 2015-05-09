@@ -44,6 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(201, 227);
             this.label1.Name = "label1";
@@ -82,6 +83,8 @@
             // btnDeal
             // 
             this.btnDeal.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDeal.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnDeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeal.Location = new System.Drawing.Point(204, 257);
             this.btnDeal.Name = "btnDeal";
             this.btnDeal.Size = new System.Drawing.Size(122, 41);
@@ -93,6 +96,8 @@
             // btnHit
             // 
             this.btnHit.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnHit.FlatAppearance.BorderColor = System.Drawing.Color.LightGreen;
+            this.btnHit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHit.Location = new System.Drawing.Point(332, 257);
             this.btnHit.Name = "btnHit";
             this.btnHit.Size = new System.Drawing.Size(121, 41);
@@ -104,6 +109,8 @@
             // btnStand
             // 
             this.btnStand.BackColor = System.Drawing.Color.Crimson;
+            this.btnStand.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.btnStand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStand.Location = new System.Drawing.Point(459, 257);
             this.btnStand.Name = "btnStand";
             this.btnStand.Size = new System.Drawing.Size(122, 41);
@@ -115,11 +122,12 @@
             // tbAlert
             // 
             this.tbAlert.BackColor = System.Drawing.Color.Honeydew;
+            this.tbAlert.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.tbAlert.Location = new System.Drawing.Point(204, 190);
             this.tbAlert.Name = "tbAlert";
             this.tbAlert.ReadOnly = true;
-            this.tbAlert.Size = new System.Drawing.Size(377, 29);
+            this.tbAlert.Size = new System.Drawing.Size(377, 22);
             this.tbAlert.TabIndex = 7;
             this.tbAlert.Text = "Click Deal to Start !";
             // 
@@ -186,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BlackJack.Properties.Resources.back_2X;
-            this.ClientSize = new System.Drawing.Size(811, 514);
+            this.ClientSize = new System.Drawing.Size(928, 514);
             this.Controls.Add(this.tbAlert);
             this.Controls.Add(this.btnStand);
             this.Controls.Add(this.btnHit);
