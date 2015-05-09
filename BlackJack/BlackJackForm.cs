@@ -17,6 +17,7 @@ namespace BlackJack
         public bool Hit { get; set; }
         public bool Stand { get; set; }
         public int addWidth { get; set; }
+        public int DrawCard { get; set; }
         Random r;
         public List<Card> Dealer;
         public List<Card> Player;
@@ -28,6 +29,7 @@ namespace BlackJack
             Dealer=new List<Card>();
             Player=new List<Card>();
             addWidth = 10;
+            lockBtn();
         }
 
         private void BlackJackForm_Paint(object sender, PaintEventArgs e)
@@ -37,23 +39,18 @@ namespace BlackJack
             
             if (Deal)
             {
-                int pom = r.Next(52);
-                Dealer.Add(deck.deck[pom]);
+                Dealer.Add(deck.deck[DrawCard--]);
                 g.DrawImageUnscaled(imageList1.Images[Dealer[0].Img], 160, 10);
-                pom = r.Next(52);
-                Player.Add(deck.deck[pom]);
+                Player.Add(deck.deck[DrawCard--]);
                 g.DrawImageUnscaled(imageList1.Images[Player[0].Img], 10, 300);
-                pom = r.Next(52);
-                Player.Add(deck.deck[pom]);
+                Player.Add(deck.deck[DrawCard--]);
                 g.DrawImageUnscaled(imageList1.Images[Player[1].Img], 160, 300);
                 DealCards();
                 Deal = false;
             }
             else if (Hit)
             {
-                int pom = r.Next(52);
-                Card c=deck.deck[pom];
-                Player.Add(c);
+                Player.Add(deck.deck[DrawCard--]);
                 addWidth = 160;
                 for (int i = 0; i < Dealer.Count; i++)
                 {
@@ -71,16 +68,12 @@ namespace BlackJack
             }
             else if (Stand)
             {
-                int pom = r.Next(52);
-                //Card c = deck.deck[pom];
-                //Dealer.Add(c);
                 int sumD = sum(Dealer);
                 while (sumD<=17)
                 {
-                    pom = r.Next(52);
-                    Card c = deck.deck[pom];
+                    Card c = deck.deck[DrawCard--];
                     Dealer.Add(c);
-                    sumD += c.Value;
+                    sumD = sum(Dealer);
                 }
                 addWidth = 160;
                 for (int i = 0; i < Dealer.Count; i++)
@@ -192,7 +185,7 @@ namespace BlackJack
         }
         private void DealCards()
         {
-            HitorStandText();
+            msgSet(false);
             int sumP = sum(Player);
             tbPlayer.Text = sumP.ToString();
             int sumD = sum(Dealer);
@@ -203,6 +196,7 @@ namespace BlackJack
             Dealer.Clear();
             Player.Clear();
             deck.shuffle();
+            DrawCard = 51;
             unlockBtn();
             Deal = true;
             Invalidate();
