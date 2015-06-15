@@ -4,6 +4,9 @@
  */
 // var React=require('react/addons');
 // var _=require('lodash');
+import React, { Component } from 'react/addons';
+import _ from 'lodash';
+
 var App = React.createClass({
 
     /* Mixins info right away */
@@ -43,6 +46,7 @@ var App = React.createClass({
 
 });
 
+export default App;
 /* Mixins Demo */
 /* http://simblestudios.com/blog/development/react-mixins-by-example.html */
 var UselessMixin = {
